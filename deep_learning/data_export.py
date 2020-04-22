@@ -1,0 +1,11 @@
+import numpy as np
+x = np.load('cardiac_records.npy')
+y = np.load('cardiac_targets.npy')
+print(y.shape)
+print(np.sum(y))
+np.savetxt('x_train.txt',x)
+np.savetxt('y_train.txt',y)
+x_test = np.load('cardiac_records-TEST.npy')
+y_test = np.load('cardiac_targets-TEST.npy')
+np.savetxt('x_test.txt',x_test)
+np.savetxt('y_test.txt',y_test)
